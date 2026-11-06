@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Imran Creative Studio — AI-generated visual art, creative concepts and stock photography.">
+<title>Imran Creative Studio | Creative Portfolio</title>
+<style>
+:root {
+  --bg:#f7f7f4; --ink:#171915; --muted:#777970;
+  --accent:#b7ef70; --line:#dedfd8; --card:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+header{height:78px;padding:0 7%;display:flex;align-items:center;
+justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-size:19px;font-weight:850;letter-spacing:-.8px}
+.logo span{color:#759e43}
+nav{display:flex;gap:30px;font-size:13px;color:#555}
+nav a:hover{color:#759e43}
+.hero{padding:100px 7% 75px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#71834f;font-weight:700}
+h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-5px;margin:25px 0}
+h1 span{color:#789c4c}
+.hero p{max-width:490px;color:var(--muted);line-height:1.8;font-size:15px}
+.hero-art{height:390px;border-radius:5px;background:#e4e8dd;overflow:hidden}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+.button{display:inline-block;margin-top:30px;background:var(--ink);color:white;padding:15px 23px;font-size:12px;font-weight:700}
+.button:hover{background:#526a39}
+.stats{display:flex;gap:45px;margin-top:45px}
+.stat strong{display:block;font-size:24px}
+.stat small{font-size:11px;color:var(--muted)}
+.section{padding:65px 7%}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}
+h2{font-size:36px;letter-spacing:-1.5px}
+.section-head p{font-size:12px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.filter{border:1px solid var(--line);background:transparent;padding:10px 16px;
+font-size:11px;cursor:pointer;border-radius:30px}
+.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.item{background:var(--card);overflow:hidden}
+.item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s}
+.item:hover img{transform:scale(1.035)}
+.item-info{padding:14px}
+.item-info strong{font-size:12px;display:block}
+.item-info small{font-size:10px;color:var(--muted)}
+.about{background:#e9ecdf;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about p{font-size:14px;color:#62665b;line-height:1.9;margin-top:20px}
+.about-mark{font-size:clamp(55px,9vw,110px);font-weight:900;letter-spacing:-7px;color:#819b62}
+.contact{text-align:center;padding:95px 7%}
+.contact p{color:var(--muted);margin-top:15px;font-size:14px}
+footer{padding:25px 7%;border-top:1px solid var(--line);display:flex;
+justify-content:space-between;color:var(--muted);font-size:11px}
+@media(max-width:750px){
+ header{padding:0 5%}nav{gap:13px;font-size:11px}
+ .hero{grid-template-columns:1fr;padding:70px 6% 45px;gap:30px}
+ h1{letter-spacing:-3px}.hero-art{height:270px}
+ .section{padding:50px 6%}.gallery{grid-template-columns:repeat(2,1fr);gap:10px}
+ .about{grid-template-columns:1fr;gap:20px}
+ .stats{gap:25px}.section-head{display:block}.section-head p{margin-top:8px}
+ footer{padding:22px 6%;gap:12px;flex-wrap:wrap}
+}
+@media(max-width:420px){nav{gap:9px}nav a{font-size:10px}.gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#">IMRAN<span>.</span>CREATIVE</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">Independent Creative Portfolio</div>
+    <h1>Ideas into<br><span>Visuals.</span></h1>
+    <p>Welcome to Imran Creative Studio — a collection of AI-generated visuals, imaginative concepts and creative digital artwork.</p>
+    <a class="button" href="#work">EXPLORE MY WORK ↗</a>
+    <div class="stats">
+      <div class="stat"><strong id="total">38+</strong><small>CREATIVE VISUALS</small></div>
+      <div class="stat"><strong>AI</strong><small>CREATIVE PROCESS</small></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="images/Remote_office_desk_setup_2x.png" alt="Creative workspace">
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="section-head">
+    <div><div class="eyebrow">Selected Collection</div><h2>Creative Works.</h2></div>
+    <p>Explore the visual collection</p>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="all">All Works</button>
+    <button class="filter" data-filter="nature">Nature</button>
+    <button class="filter" data-filter="technology">Technology</button>
+    <button class="filter" data-filter="business">Business</button>
+    <button class="filter" data-filter="lifestyle">Lifestyle</button>
+    <button class="filter" data-filter="other">Other</button>
+  </div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section class="section about" id="about">
+  <div>
+    <div class="eyebrow">Behind The Studio</div>
+    <h2>Creativity meets technology.</h2>
+    <p>Imran Creative Studio explores the possibilities of AI-assisted visual creation. Each project is an opportunity to turn an idea into a compelling visual experience.</p>
+    <p>Focused on creative concepts, digital imagery and visual storytelling.</p>
+  </div>
+  <div class="about-mark">CREATE.<br>IMAGINE.</div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="eyebrow">Let's Connect</div>
+  <h2>Have a creative idea?</h2>
+  <p>For portfolio enquiries and creative collaborations, get in touch.</p>
+  <a class="button" href="mailto:YOUR_EMAIL@example.com">CONTACT THE STUDIO ↗</a>
+</section>
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Imran Creative Studio</span>
+  <span>AI Art · Digital Creativity · Visual Portfolio</span>
+</footer>
+
+<script>
+const imageFiles = ["Abstract_3D_digital_artwork_0f5b9d9b_2x.png", "Abstract_metallic_ribbons_flowing_036c0f97_2x.png", "Abstract_metallic_ribbons_flowing_5f50b774_2x.png", "Alpine_lake_and_mountain_sunrise_b8c09dc3_2x.png", "Alpine_lake_and_mountains_landscape_b7a67e34_2x.png", "Avocado_toast_and_orange_juice_0adf9f18_2x.png", "Avocado_toast_and_orange_juice_790f09ce_2x.png", "Cappuccino_and_pastry_on_table_88e9edd5_2x.png", "Cappuccino_and_pastry_on_table_fb7dd9f6_2x.png", "Digital_cybersecurity_shield_pro…_647a4909_2x.png", "Fashion_fabrics_arranged_in_layers_96b29b33_2x.png", "Financial_analytics_workspace_desk_a0f6de16_2x.png", "Financial_analytics_workspace_setup_714ee54f_2x.png", "Forest_path_through_green_trees_6c642f41_2x.png", "Golden_desert_dunes_at_sunset_c6e7dc87_2x.png", "Golden_desert_dunes_landscape_94bb2902_2x.png", "Home_office_desk_setup_95525df3_2x.png", "Ivory_limestone_texture_background_dd82ddfe_2x.png", "Layered_fashion_fabrics_on_display_ba500082_2x.png", "Limestone_texture_background_design_6714f902_2x.png", "Minimalist_bedroom_interior_design_e71a8760_2x.png", "Minimalist_bedroom_interior_design_ff08a27c_2x.png", "Modern_minimalist_business_works…_044ebead_2x.png", "Modern_minimalist_business_works…_4b3c2b2d_2x.png", "Modern_minimalist_living_room_in…_07d07f64_2x.png", "Modern_minimalist_living_room_in…_b0d4fe85_2x.png", "Remote_office_desk_setup_2x.png", "Remote_office_desk_setup_ae6e75cd_2x.png", "Shield_protecting_digital_networ…_4ee51a82_2x.png", "Skincare_containers_on_stone_blocks_0a4a8c37_2x.png", "Skincare_containers_on_stone_blocks_ec497c47_2x.png", "Sustainable_modern_residential_h…_1cdf7c87_2x.png", "Sustainable_residential_house_ex…_c92dd592_2x.png", "Traditional_women's_three-piece_…_b6f6f5e4_2x.png", "Traditional_women_clothing_outfi…_1a9f9afd_2x.png", "Tropical_coastline_with_sandy_beach_16207c16_2x.png", "Tropical_coastline_with_sandy_beach_7c461bdd_2x.png", "Winding_forest_path_in_woods_2bbf5c01_2x.png"];
+// Add all image filenames here automatically in the next setup step.
+const gallery = document.getElementById("gallery");
+const filters = document.querySelectorAll(".filter");
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function categoryFromName(name) {
+  const n = name.toLowerCase();
+  if (/nature|forest|mountain|sunrise|sunset|flower|landscape|ocean/.test(n)) return "nature";
+  if (/tech|computer|digital|ai|robot|server|software/.test(n)) return "technology";
+  if (/office|business|meeting|work|desk|finance/.test(n)) return "business";
+  if (/home|food|travel|lifestyle|fashion|people/.test(n)) return "lifestyle";
+  return "other";
+}
+function render(filter="all") {
+  gallery.innerHTML = "";
+  const files = imageFiles.filter(name => filter === "all" || categoryFromName(name) === filter);
+  files.forEach((name,index) => {
+    const category = categoryFromName(name);
+    const card = document.createElement("article");
+    card.className = "item";
+    const img = document.createElement("img");
+    img.src = "images/" + name;
+    img.alt = name.replace(/[_-]/g," ").replace(/\.png$/i,"");
+    img.loading = "lazy";
+    const info = document.createElement("div");
+    info.className = "item-info";
+    const title = document.createElement("strong");
+    title.textContent = name.replace(/_2x\.png$/i,"").replace(/[_-]/g," ");
+    const label = document.createElement("small");
+    label.textContent = category.toUpperCase();
+    info.append(title,label);
+    card.append(img,info);
+    gallery.append(card);
+  });
+}
+filters.forEach(button => button.addEventListener("click", () => {
+  filters.forEach(b => b.classList.remove("active"));
+  button.classList.add("active");
+  render(button.dataset.filter);
+}));
+render();
+</script>
+</body>
+</html>
